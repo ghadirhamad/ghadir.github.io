@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Home</title>
-</head>
+    <title>Task 1</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0; 
+            background-color: white;
+        }
+
+        .header {
+            background-color:palevioletred;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .header a:hover {
+            color: black;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content p {
+            margin: 50px;
+            text-align: left;
+            font-size: 25px;
+            border: 2px solid palevioletred;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .content p:hover{
+            box-shadow: 0 0 20px 0 rgba(219, 112, 147, 0.5);
+        }
+
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer img {
+            box-shadow: 0 0 20px 0 rgba(219, 112, 147, 0.5);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>  
 <body>
-    <h1>Home</h1>
-    <p>Welcome to the home page.</p>
+    <div class="header">
+        <a href="https://www.linkedin.com/in/ghadir-hamad-0a7774223?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">LinkedIn</a>
+        <a href="https://github.com/ghadirhamad">GitHub</a>
+        <a href="https://www.researchgate.net/profile/Ghadir-Hamad">ResearchGate</a>
+    </div>
+
+    <div class="content">
+        <h1 id="inspire"> Believe in yourself!</h1>
+        <p>Hello, I'm <span style="color:palevioletred;"><strong>Ghadir Hamad</strong></span>. I graduated with a Bachelor's degree in <span style="color:palevioletred;"><strong>information technology</strong></span>. With a year of experience in <span style="color:palevioletred;"><strong>data science</strong></span>, particularly deep learning, I have published a research in this field. My passion for learning new technologies drives me, and I am eager to transition into <span style="color:palevioletred;"><strong>web development</strong></span>. I find joy in combining design, art, and programming to create impactful web experiences. People often describe me as hardworking, ambitious, and a team player, and I am excited to bring these qualities to a web development role.</p>    
+        </div>
+
+    <div class="footer">
+        <img src="Ghadir.jpg" alt="Ghadir Hamad">
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        const inspireElement = document.getElementById('inspire');
+        const inspiringQuotes = [
+            "You can achieve anything!",
+            "Never give up!",
+            "Dream big!",
+            "Stay positive!"
+        ];
+
+        let quoteIndex = 0;
+
+        function changeQuote() {
+            inspireElement.textContent = inspiringQuotes[quoteIndex];
+            quoteIndex = (quoteIndex + 1) % inspiringQuotes.length;
+        }
+
+        setInterval(changeQuote, 2000);
+        });
+    </script>
 </body>
+
+
 </html>
